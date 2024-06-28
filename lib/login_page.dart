@@ -122,23 +122,4 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-void main() {
-  runApp(MaterialApp(
-    home: LoginPage(),
-    routes: {
-      '/signup': (context) => SignUpPage(), // Implement SignUpPage
-    },
-  ));
-}
 
-class SignUpPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Sign Up')),
-      body: Center(
-        child: Text('Sign Up Page'),
-      ),
-    );
-  }
-}
