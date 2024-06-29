@@ -33,12 +33,12 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             SizedBox(height: 20),
             Text(
-              'EduAi',
+              'EduAI',
               style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 20),
             Image.network(
-              'https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-bookkeeping-clipart-image-of-working-woman-and-papers-cartoon-vector-png-image_6793594.png', // Replace with your network image URL
+              'https://www.bing.com/th?id=OIP.GeQhgwXGe-zhluaiVQeCwgAAAA&w=236&c=11&rs=1&qlt=90&bgcl=ececec&o=6&pid=PersonalBing&p=0', // Replace with your network image URL
               width: 200, // Adjust the size as needed
               height: 200, // Adjust the size as needed
             ),

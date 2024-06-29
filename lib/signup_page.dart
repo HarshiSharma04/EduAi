@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smart_learning_application/LearningStyleScreen.dart';
+import 'package:smart_learning_application/home_page_visual.dart';
+import 'package:smart_learning_application/login_page.dart';
 
 import 'learning_style_form.dart';
 
@@ -126,7 +128,11 @@ class _SignUpPageState extends State<SignUpPage> {
                       SizedBox(height: 20),
                       ElevatedButton(
                         onPressed: () {
-                          // Handle sign up
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF48A9A6), // Changed the color of the sign up button
@@ -137,7 +143,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         child: Text(
                           'SIGN UP',
-                          style: TextStyle(fontSize: 18, color: Colors.white), // Changed the color of the 'SIGN UP' text to white
+                          style: TextStyle(fontSize: 18, color: Colors.white),
+                          // Changed the color of the 'SIGN UP' text to white
                         ),
                       ),
                       SizedBox(height: 10),
@@ -150,7 +157,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               onPressed: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => LearningStyleScreen()),
+                                  MaterialPageRoute(builder: (context) => LoginPage()),
                                 );
                               },
                               child: Text(

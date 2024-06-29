@@ -6,7 +6,7 @@ class LearningStyleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Learning Style')),
+      //appBar: AppBar(title: Text('Learning Style')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
