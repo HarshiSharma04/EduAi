@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'ai_tutor.dart'; // Import the AI Tutor page
+import 'ai_tutor.dart';
+import 'focus_mode_page.dart'; // Import the AI Tutor page
 
 class HomePage extends StatefulWidget {
   @override
@@ -39,9 +40,10 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _navigateToFocusMode() {
-    // Navigate to focus mode screen or implement focus mode logic
-    // Example: Navigator.push(context, MaterialPageRoute(builder: (context) => FocusModeScreen()));
-    // Replace FocusModeScreen with your actual focus mode implementation
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => FocusModePage()),
+    );
   }
 
   TextEditingController _taskController = TextEditingController();

@@ -29,6 +29,7 @@ class _AiTutorPageState extends State<AiTutorPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFF48A9A6),
         centerTitle: true,
         title: const Text(
           "AI Tutor",
