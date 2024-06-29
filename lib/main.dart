@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
+import 'package:smart_learning_application/const.dart';
 import 'package:smart_learning_application/splash_screen.dart';
 import 'login_page.dart';
 import 'signup_page.dart';
@@ -6,6 +8,9 @@ import 'home_page_visual.dart';
  // Ensure you have a signup_page.dart file
 
 void main() {
+  Gemini.init(
+    apiKey: GEMINI_API_KEY,
+  );
   runApp(MyApp());
 }
 

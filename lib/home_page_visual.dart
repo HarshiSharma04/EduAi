@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ai_tutor.dart'; // Import the AI Tutor page
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class _HomePageState extends State<HomePage> {
   // Dummy list of subjects for demonstration
   List<String> subjectNames = [
     'Maths', 'Science', 'History', 'Language', 'Arts',
-    'Geography', 'Music', 'Computer Science', 'Physics', 'Biology',
+    'Geography', 'Music', 'Computer', 'Physics', 'Biology',
   ];
 
   int _selectedIndex = 0;
@@ -19,8 +20,22 @@ class _HomePageState extends State<HomePage> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      // Handle navigation or page switching based on index
     });
+    switch (index) {
+      case 0:
+      // Navigate to Home (current page)
+        break;
+      case 1:
+      // Navigate to My Learning
+      // Example: Navigator.push(context, MaterialPageRoute(builder: (context) => MyLearningPage()));
+        break;
+      case 2:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => AiTutorPage()),
+        );
+        break;
+    }
   }
 
   void _navigateToFocusMode() {
@@ -100,14 +115,18 @@ class _HomePageState extends State<HomePage> {
                   Expanded(
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: 'Search courses', suffixStyle: TextStyle(color: Color(0xFF531002)),
+                        hintText: 'Search courses',
+                        suffixStyle: TextStyle(color: Color(0xFF531002)),
                         suffixIcon: Icon(Icons.search),
                       ),
                     ),
                   ),
                   SizedBox(width: 10), // Adjust spacing between search bar and dropdown button
                   DropdownButton<String>(
-                    hint: Text('Preference', style: TextStyle(color: Color(0xFF531002)),),
+                    hint: Text(
+                      'Preference',
+                      style: TextStyle(color: Color(0xFF531002)),
+                    ),
                     value: _selectedPreference,
                     items: ['Visual', 'Auditory', 'Reading/Writing', 'Kinesthetic']
                         .map((String preference) {
@@ -135,7 +154,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 10),
               Text(
                 'Recommended for you',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color:Color(0xFF002131)),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xFF002131)),
               ),
               SizedBox(height: 10),
               Container(
@@ -166,7 +185,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 20),
               Text(
                 'Subjects',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color:Color(0xFF002131)),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xFF002131)),
               ),
               SizedBox(height: 10),
               Container(
@@ -183,7 +202,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 20),
               Text(
                 'Your Tasks',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color:Color(0xFF002131)),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xFF002131)),
               ),
               SizedBox(height: 10),
               Row(
@@ -264,34 +283,49 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _navigateToFocusMode,
-        tooltip: 'Focus Mode', // Tooltip for better user understanding
-        backgroundColor: Color(0xFF48A9A6),
-        child: Icon(Icons.lightbulb_outline), // Icon changed to lightbulb_outline for focus mode
+        tooltip: 'Focus Mode', // Provide a tooltip for accessibility
+        backgroundColor: Color(0xFF48A9A6), // Set the background color
+        child: Icon(Icons.timer, color: Colors.white), // Set the icon color to white
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      // Move FAB to the right side above the bottom navigation bar
     );
   }
 
   Widget _buildSubjectCard(String subjectName, int index) {
-    Color cardColor = Color(0xFFECE6E6); // Set card color to ECE6E6
-
     return Card(
-      color: cardColor,
-      child: Container(
-        width: 150,
-        height: 80,
-        child: Center(
-          child: Text(
-            subjectName,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      color: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: InkWell(
+        onTap: () {
+          // Handle card tap
+        },
+        child: Container(
+          width: 150,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.book,
+                size: 50,
+                color: Color(0xFF48A9A6),
+              ),
+              SizedBox(height: 10),
+              Text(
+                subjectName,
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF002131),
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ],
           ),
         ),
       ),
     );
   }
-}
-
-void main() {
-  runApp(MaterialApp(
-    home: HomePage(),
-  ));
 }

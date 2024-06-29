@@ -39,6 +39,9 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   url_launcher: ^6.3.0
   youtube_explode_dart: ^2.2.1
+  flutter_gemini: ^2.0.4
+  image_picker: ^1.1.2
+  dash_chat_2: ^0.0.21
 
 dev_dependencies:
   flutter_test:
