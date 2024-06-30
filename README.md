@@ -6,7 +6,8 @@
 -> The AI tutor is a built in AI chatbot which solves the doubts of the user. It helps prevent the user to switch to other sources to solve their doubts or learn something new. <br>
 -> Focus mode is a timer which helps user know the amount of time they studied being focused. <br>
 
-##TechStack 
+**TechStack** 
+
 -> Flutter for frontend android development <br>
 -> Python, Flask, Pandas, Sklearn for model development and integration<br>
 -> Youtube API and Chatbot API integrated in the app<br>
