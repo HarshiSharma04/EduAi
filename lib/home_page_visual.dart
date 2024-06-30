@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ai_tutor.dart';
-import 'focus_mode_page.dart'; // Import the AI Tutor page
+import 'focus_mode_page.dart'; // Import the Focus Mode page
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,6 +14,23 @@ class _HomePageState extends State<HomePage> {
   List<String> subjectNames = [
     'Maths', 'Science', 'History', 'Language', 'Arts',
     'Geography', 'Music', 'Computer', 'Physics', 'Biology',
+  ];
+
+  // Example data placeholders for recommended videos
+  List<String> videoTitles = [
+    'C++ Basics in One Shot - Strivers A2Z DSA Course - L1',
+    'Introduction to JavaScript + Setup | JavaScript Tutorial in Hindi #1',
+    'Python Tutorial for Beginners | Learn Python in 1.5 Hours',
+    'ApnaCollegeOfficial which Coding Platform should I study from?',
+    'Web Development Tutorial for Beginners (2024 Edition)',
+  ];
+
+  List<String> videoImageUrls = [
+    'https://th.bing.com/th/id/OIP.0STrpvtmnpiN8MxYI-xUPwAAAA?rs=1&pid=ImgDetMain',
+    'https://www.codewithharry.com/_next/image/?url=https:%2F%2Fcwh-full-next-space.fra1.digitaloceanspaces.com%2Fvideoseries%2Fultimate-js-tutorial-hindi-1%2FJS-Thumb.jpg&w=828&q=75',
+    'https://th.bing.com/th/id/OIP.raiOFsxSpMFzOFwa2TXUmQAAAA?rs=1&pid=ImgDetMain',
+    'https://i.ytimg.com/vi/qTph1pj_rCo/maxresdefault.jpg',
+    'https://www.someurl.com/your-image4.jpg',
   ];
 
   int _selectedIndex = 0;
@@ -69,12 +86,16 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color(0xFF48A9A6),
         title: Text('EduAI'),
         actions: [
-          IconButton(
-            icon: Icon(Icons.account_circle),
+          /*IconButton(
+            icon: Image.asset(
+              'lib/assets/profile_icon.jpg', // Replace with your asset image path
+              width: 30,
+              height: 30,
+            ),
             onPressed: () {
               // Navigate to profile screen or show profile menu
             },
-          ),
+          ),*/
         ],
       ),
       drawer: Drawer(
@@ -85,21 +106,31 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 color: Color(0xFF48A9A6),
               ),
-              child: Text(
-                'Drawer Header',
-                style: TextStyle(color: Colors.white),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundImage: AssetImage('lib/assets/profile_icon.jpg'),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Harshita', // Replace with user's name
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                  ),
+                ],
               ),
             ),
             ListTile(
-              title: Text('Item 1'),
+              title: Text('Settings'),
               onTap: () {
-                // Handle navigation to item 1
+                // Handle navigation to settings
               },
             ),
             ListTile(
-              title: Text('Item 2'),
+              title: Text('FAQ'),
               onTap: () {
-                // Handle navigation to item 2
+                // Handle navigation to FAQ
               },
             ),
             // Add more list items as needed
@@ -163,22 +194,43 @@ class _HomePageState extends State<HomePage> {
                 height: 200,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 5, // Replace with actual data length
+                  itemCount: videoTitles.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      child: Column(
-                        children: [
-                          Image.network(
-                            'https://placehold.it/200x200',
-                            width: 150,
-                            height: 100,
-                            fit: BoxFit.cover,
+                    String videoTitle = videoTitles[index];
+                    String imageURL = videoImageUrls[index]; // Assuming you have a list of URLs
+
+                    return Padding(
+                      padding: EdgeInsets.only(right: 10),
+                      child: SizedBox(
+                        width: 200, // Fixed width for each card
+                        child: Card(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.vertical(top: Radius.circular(4)),
+                                child: Image.network(
+                                  imageURL, // Use the actual image URL here
+                                  width: 200,
+                                  height: 120,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  videoTitle,
+                                  maxLines: 2, // Limit the number of lines
+                                  overflow: TextOverflow.ellipsis, // Handle overflow
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text('Video ${index + 1}'),
-                          ),
-                        ],
+                        ),
                       ),
                     );
                   },
@@ -260,9 +312,7 @@ class _HomePageState extends State<HomePage> {
           onTap: _onItemTapped,
           selectedItemColor: Colors.white, // Color of selected item's icon and text
           unselectedItemColor: Colors.white.withOpacity(0.6), // Color of unselected item's icon and text
-          showSelectedLabels: true,
-          showUnselectedLabels: true,
-          items: [
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home',
@@ -276,55 +326,42 @@ class _HomePageState extends State<HomePage> {
               label: 'AI Tutor',
             ),
           ],
-          selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
-          unselectedLabelStyle: TextStyle(fontWeight: FontWeight.normal),
-          selectedFontSize: 12,
-          unselectedFontSize: 12,
-          type: BottomNavigationBarType.fixed, // Ensure the items are always visible
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _navigateToFocusMode,
-        tooltip: 'Focus Mode', // Provide a tooltip for accessibility
-        backgroundColor: Color(0xFF48A9A6), // Set the background color
-        child: Icon(Icons.timer, color: Colors.white), // Set the icon color to white
+        backgroundColor: Color(0xFF48A9A6), // Change the background color of the floating action button
+        tooltip: 'Focus Mode',
+        child: Icon(Icons.timer, color: Colors.white), // Change the color of the icon
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      // Move FAB to the right side above the bottom navigation bar
     );
   }
 
   Widget _buildSubjectCard(String subjectName, int index) {
-    return Card(
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: InkWell(
-        onTap: () {
-          // Handle card tap
-        },
-        child: Container(
-          width: 150,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.book,
-                size: 50,
-                color: Color(0xFF48A9A6),
-              ),
-              SizedBox(height: 10),
-              Text(
-                subjectName,
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFF002131),
+    return Padding(
+      padding: EdgeInsets.only(right: 10),
+      child: SizedBox(
+        width: 150,
+        child: Card(
+          color: Colors.grey[200], // Neutral color for the card background
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.book,
+                  size: 40,
+                  color: Color(0xFF48A9A6), // Adjust the book icon color
                 ),
-                textAlign: TextAlign.center,
-              ),
-            ],
+                SizedBox(height: 8),
+                Text(
+                  subjectName,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
           ),
         ),
       ),

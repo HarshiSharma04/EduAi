@@ -7,10 +7,10 @@ import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:image_picker/image_picker.dart';
 
 class AiTutorPage extends StatefulWidget {
-  const AiTutorPage({super.key});
+  const AiTutorPage({Key? key}) : super(key: key);
 
   @override
-  State<AiTutorPage> createState() => _AiTutorPageState();
+  _AiTutorPageState createState() => _AiTutorPageState();
 }
 
 class _AiTutorPageState extends State<AiTutorPage> {
@@ -21,10 +21,11 @@ class _AiTutorPageState extends State<AiTutorPage> {
   ChatUser currentUser = ChatUser(id: "0", firstName: "User");
   ChatUser geminiUser = ChatUser(
     id: "1",
-    firstName: "Gemini",
+    firstName: "AI Tutor",
     profileImage:
-    "https://seeklogo.com/images/G/google-gemini-logo-A5787B2669-seeklogo.com.png",
+    "https://cdn2.vectorstock.com/i/1000x1000/64/71/female-teacher-avatar-educacion-and-school-vector-38156471.jpg",
   );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,18 +41,27 @@ class _AiTutorPageState extends State<AiTutorPage> {
   }
 
   Widget _buildUI() {
-    return DashChat(
-      inputOptions: InputOptions(trailing: [
-        IconButton(
-          onPressed: _sendMediaMessage,
-          icon: const Icon(
-            Icons.image,
-          ),
-        )
-      ]),
-      currentUser: currentUser,
-      onSend: _sendMessage,
-      messages: messages,
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: NetworkImage(
+              "https://i.pinimg.com/736x/ee/e1/d4/eee1d4114e36fa5f1dc7358c60f4b290.jpg"),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: DashChat(
+        inputOptions: InputOptions(trailing: [
+          IconButton(
+            onPressed: _sendMediaMessage,
+            icon: const Icon(
+              Icons.image,
+            ),
+          )
+        ]),
+        currentUser: currentUser,
+        onSend: _sendMessage,
+        messages: messages,
+      ),
     );
   }
 
@@ -67,12 +77,10 @@ class _AiTutorPageState extends State<AiTutorPage> {
           File(chatMessage.medias!.first.url).readAsBytesSync(),
         ];
       }
-      gemini
-          .streamGenerateContent(
+      gemini.streamGenerateContent(
         question,
         images: images,
-      )
-          .listen((event) {
+      ).listen((event) {
         ChatMessage? lastMessage = messages.firstOrNull;
         if (lastMessage != null && lastMessage.user == geminiUser) {
           lastMessage = messages.removeAt(0);
