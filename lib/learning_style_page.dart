@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'learning_style_result_page.dart'; // Import the result page
 
 void main() {
   runApp(MaterialApp(
@@ -75,12 +76,15 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _submitQuiz() {
-    // Implement your logic for submitting quiz answers here
-    // This is where you would typically process or store the user's responses
-    // For demo purposes, let's print the selected options
-    for (int i = 0; i < _questions.length; i++) {
-      print('Question ${i + 1}: ${_questions[i]['options'][_questions[i]['selectedOption']]}');
-    }
+    // Navigate to result page upon submission
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => LearningStyleResultPage(
+          selectedStyle: 'Visual', // Hardcoded for now, replace with actual logic to determine style
+        ),
+      ),
+    );
   }
 
   List<Widget> _buildOptions(int questionIndex) {
