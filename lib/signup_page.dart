@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:smart_learning_application/LearningStyleScreen.dart';
-import 'package:smart_learning_application/home_page_visual.dart';
-import 'package:smart_learning_application/login_page.dart';
-
-import 'learning_style_form.dart';
+import 'learning_style_page.dart';
+import 'login_page.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -130,9 +127,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => HomePage()),
+                            MaterialPageRoute(builder: (context) => QuizScreen()),
                           );
-
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF48A9A6), // Changed the color of the sign up button

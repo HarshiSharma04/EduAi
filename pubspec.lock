@@ -34,7 +34,7 @@ packages:
     source: hosted
     version: "2.1.1"
   cached_network_image:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: cached_network_image
       sha256: "28ea9690a8207179c319965c13cd8df184d5ee721ae2ce60f398ced1219cea1f"
@@ -270,6 +270,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.20"
+  flutter_swiper_null_safety:
+    dependency: "direct main"
+    description:
+      name: flutter_swiper_null_safety
+      sha256: "5a855e0080d035c08e82f8b7fd2f106344943a30c9ab483b2584860a2f22eaaf"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   flutter_test:
     dependency: "direct dev"
     description: flutter
