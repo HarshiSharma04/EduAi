@@ -1,0 +1,101 @@
+content_id,title,description,category,difficulty,rating
+101,Introduction to Spanish,Learn the basics of Spanish language and grammar.,Language Arts,Easy,4.3
+102,Ancient Civilizations,Explore the history of ancient civilizations.,History,Easy,4.5
+103,Intermediate Spanish,Develop your Spanish language skills with advanced grammar.,Language Arts,Medium,4.5
+104,Advanced Algebra,Master advanced algebraic concepts and problem-solving.,Math,Hard,4.2
+105,Medieval History,Study the key events and figures of the medieval period.,History,Easy,4.8
+106,Modern History,Analyze significant modern historical events and trends.,History,Hard,4.6
+107,Calculus I,Introduction to the fundamentals of calculus.,Math,Hard,4.5
+108,Renaissance History,Examine the social and political changes of the Renaissance.,History,Medium,3.1
+109,Basic Geometry,Learn the basics of geometric shapes and theorems.,Math,Easy,3
+110,Physics Fundamentals,Understand the basic principles of physics.,Science,Hard,3.4
+111,Beginner French,Start learning French with basic vocabulary and grammar.,Language Arts,Easy,4.3
+112,Arithmetic Essentials,Cover essential arithmetic operations and concepts.,Math,Easy,3.8
+113,The Renaissance,Explore the Renaissance period in depth.,History,Medium,3.8
+114,Basic Algebra,Learn the basics of algebra and solve simple equations.,Math,Easy,4.8
+115,World War II,Study the major events and impacts of World War II.,History,Easy,4.8
+116,Advanced Chemistry,Dive into advanced topics in chemistry.,Science,Hard,4.8
+117,Intermediate Algebra,Explore intermediate algebraic concepts and techniques.,Math,Medium,3.6
+118,Introduction to Biology,Learn the basics of biological science.,Science,Easy,4.4
+119,Literature Analysis,Analyze classic and contemporary literary works.,Language Arts,Hard,3.5
+120,Industrial Revolution,Study the social and economic impacts of the Industrial Revolution.,History,Medium,3.4
+121,20th Century History,Explore major historical events of the 20th century.,History,Medium,3.4
+122,Advanced Physics,Delve into advanced physics concepts and theories.,Science,Hard,3.7
+123,Creative Writing,Develop creative writing skills through various exercises.,Language Arts,Hard,3.9
+124,Trigonometry,Learn trigonometric functions and their applications.,Math,Hard,4.7
+125,Advanced Calculus,Master advanced calculus topics and techniques.,Math,Hard,3.2
+126,American History,Study the key events in American history.,History,Hard,4.5
+127,Basic Chemistry,Introduction to basic chemistry concepts and experiments.,Science,Easy,4.1
+128,Earth Science,Learn about Earth's processes and physical characteristics.,Science,Easy,3.6
+129,Statistics,Understand the fundamentals of statistics and data analysis.,Math,Medium,4
+130,German for Beginners,Start learning German with basic vocabulary and phrases.,Language Arts,Easy,3.6
+131,Advanced English,Enhance your English skills with advanced grammar and literature.,Language Arts,Easy,4.2
+132,Basic Trigonometry,Learn the basics of trigonometric functions and identities.,Math,Easy,3.9
+133,Differential Equations,Study differential equations and their applications.,Math,Hard,3.3
+134,Genetics,Explore the principles of genetics and heredity.,Science,Medium,3.2
+135,Spanish Conversation,Practice Spanish through conversation and interactive activities.,Language Arts,Medium,4.1
+136,Linear Algebra,"Study vectors, matrices, and linear transformations.",Math,Medium,4.8
+137,Probability,Understand probability theory and its applications.,Math,Medium,3.7
+138,European History,Examine key events in European history from the Renaissance to the present.,History,Easy,4.5
+139,Precalculus,Prepare for calculus by learning essential precalculus concepts.,Math,Easy,4.3
+140,Multivariable Calculus,Explore calculus of multiple variables and vector calculus.,Math,Hard,4.9
+141,Advanced French,Enhance your French language skills with advanced topics.,Language Arts,Medium,4.6
+142,Human Anatomy,Study the structure and function of the human body.,Science,Easy,4.1
+143,English Literature,Explore classic and modern works of English literature.,Language Arts,Easy,4.3
+144,Organic Chemistry,"Study the structure, properties, and reactions of organic compounds.",Science,Hard,4.8
+145,Cold War History,Learn about the events and significance of the Cold War.,History,Hard,3.8
+146,Geometry,"Study the properties and relations of points, lines, surfaces, and solids.",Math,Hard,3.7
+147,Modern European History,Explore the history of Europe from the 18th century to the present.,History,Easy,3
+148,Environmental Science,Study environmental processes and human impacts on ecosystems.,Science,Easy,4.7
+149,Advanced Writing,Improve your writing skills with advanced techniques and exercises.,Language Arts,Hard,4.6
+150,Poetry Analysis,Analyze various forms and styles of poetry.,Language Arts,Medium,3.2
+151,American Civil War,Study the events and impacts of the American Civil War.,History,Hard,4.2
+152,Physics II,Continue learning about physics with more advanced topics.,Science,Hard,3.9
+153,World History,Study major global historical events and themes.,History,Hard,3.2
+154,History of Medicine,Explore the history of medical practices and discoveries.,History,Hard,5
+155,Basic Statistics,Learn the basics of statistical methods and analysis.,Math,Easy,3.4
+156,Enlightenment History,Study the intellectual and cultural movement of the Enlightenment.,History,Medium,3.1
+157,Number Theory,Explore the properties of numbers and fundamental number theory concepts.,Math,Hard,4.2
+158,Geometry II,Continue learning about geometric shapes and theorems.,Math,Medium,4.5
+159,Literary Criticism,Study various approaches to analyzing and interpreting literature.,Language Arts,Medium,3.1
+160,Algebra II,Further explore algebraic concepts and techniques.,Math,Medium,4.3
+161,Advanced Geometry,Master complex geometric concepts and their applications.,Math,Hard,4.1
+162,French for Beginners,Learn basic French vocabulary and grammar.,Language Arts,Easy,4.3
+163,Advanced German,Enhance your German language skills with advanced topics.,Language Arts,Hard,3.9
+164,Modern Literature,Explore contemporary literary works and authors.,Language Arts,Medium,4.7
+165,Probability II,Continue learning about probability with more advanced concepts.,Math,Hard,4.2
+166,African History,Study the history of African civilizations and cultures.,History,Medium,4.8
+167,Asian History,Explore the history of Asian countries and their cultural heritage.,History,Medium,3.7
+168,Quantum Mechanics,Dive into the principles of quantum mechanics.,Science,Hard,4.6
+169,Shakespeare Studies,Study the works and impact of William Shakespeare.,Language Arts,Hard,3.9
+170,Biochemistry,Explore the chemical processes within living organisms.,Science,Medium,4.1
+171,Art History,Explore the evolution of art across different cultures.,History,Easy,3.9
+172,Cryptography,Learn about encryption methods and cryptographic algorithms.,Math,Hard,4.5
+173,Environmental History,Study the historical interactions between humans and the environment.,History,Medium,3.1
+174,Public Speaking,Develop effective public speaking and presentation skills.,Language Arts,Medium,3.1
+175,Macroeconomics,Study the behavior of the economy as a whole.,Social Science,Medium,4.4
+176,Italian for Beginners,Start learning Italian with basic vocabulary and grammar.,Language Arts,Easy,3.9
+177,Game Theory,Explore the mathematical models of strategic decision-making.,Mathematics,Hard,3.5
+178,Ancient Greek,Study ancient Greek language and literature.,Language Arts,Hard,3.5
+179,Paleontology,Explore the study of ancient life through fossils.,Science,Medium,4.2
+180,Digital Marketing,Learn strategies and techniques for digital marketing.,Business,Medium,4.2
+181,Russian Language,Start learning Russian with basic vocabulary and grammar.,Language Arts,Easy,3.7
+182,Data Structures,Study fundamental data structures and their applications.,Computer Science,Hard,4.6
+183,Music Theory,Explore the fundamentals of music theory and composition.,Arts,Medium,4.6
+184,Marine Biology,Study marine organisms and their ecosystems.,Science,Hard,4
+185,French Literature,Explore classic and modern French literary works.,Language Arts,Medium,3.7
+186,Robotics,Learn about robotics and robotic systems.,Engineering,Hard,4.6
+187,American Literature,Explore classic and modern American literary works.,Language Arts,Hard,3.4
+188,Computer Networks,Study principles and protocols of computer networks.,Computer Science,Hard,4.6
+189,Behavioral Psychology,Study the behavior and cognitive processes of humans and animals.,Psychology,Medium,3.4
+190,Chinese Language,Start learning Mandarin Chinese with basic vocabulary and grammar.,Language Arts,Easy,3.2
+191,Financial Accounting,Learn principles and practices of financial accounting.,Business,Medium,4.2
+192,Philosophy of Ethics,Explore ethical theories and principles in philosophy.,Philosophy,Medium,4
+193,Web Development,Learn front-end and back-end web development skills.,Computer Science,Medium,4.7
+194,Spanish Literature,Explore classic and modern Spanish literary works.,Language Arts,Easy,3.4
+195,Epidemiology,Study the distribution and determinants of health-related states or events.,Medicine,Hard,3.8
+196,Japanese Language,Start learning Japanese with basic vocabulary and grammar.,Language Arts,Medium,4.6
+197,Human Rights Law,Study international human rights law and its applications.,Law,Hard,4.6
+198,Developmental Psychology,Explore human development across the lifespan.,Psychology,Medium,3.8
+199,Art of Negotiation,Learn strategies and techniques for effective negotiation.,Business,Medium,3.9
+200,Microeconomics,Study the behavior of individuals and firms in making decisions regarding resource allocation and pricing.,Social Science,Medium,3.6
