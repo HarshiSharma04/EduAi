@@ -2,6 +2,12 @@
 
 EduAI is an **intelligent learning companion** designed to enhance the study experience with **personalized learning recommendations, AI-driven tutoring, and productivity tracking**. Using advanced **machine learning models**, it adapts to the user's preferences and helps optimize their learning journey.  
 
+## 📽️ Demo  
+
+[![EduAI Demo]([https://img.youtube.com/vi/YOUR_VIDEO_ID/0](https://www.youtube.com/watch?v=mJapxqfsXks).jpg)]([https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://www.youtube.com/watch?v=mJapxqfsXks))  
+
+Click the image above to watch the full demo on YouTube!  
+
 ## 🚀 Key Features & Applied ML Models  
 
 ✅ **Learning Style Predictor** (Random Forest) – Determines the user’s preferred learning style (**Visual, Auditory, Reading/Writing, Kinesthetic**) to provide customized study resources.  
