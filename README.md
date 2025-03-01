@@ -24,7 +24,7 @@ EduAI adapts to the user's **learning preferences** and optimizes their study ex
 - **Model Used:** **Random Forest Classifier**  
 - **Objective:** Categorizes users into one of four learning styles: **Visual, Auditory, Reading/Writing, Kinesthetic (VARK)**.  
 - **Dataset:** User response dataset with learning behavior patterns.  
-- **Results:** Achieved **85% accuracy** in learning style classification.  
+- **Results:** Achieved **95% accuracy** in learning style classification.  
 
 ---
 
@@ -35,7 +35,7 @@ EduAI adapts to the user's **learning preferences** and optimizes their study ex
   - Difficulty level  
   - Past interactions  
 - **Implementation:** Combines **content-based filtering** and **collaborative filtering**.  
-- **Results:** Improved **recommendation accuracy by 20%** over traditional models.  
+
 
 ---
 
@@ -47,7 +47,7 @@ EduAI adapts to the user's **learning preferences** and optimizes their study ex
   - **Preprocessing:** Tokenized using GPT-2 tokenizer.  
   - **Fine-tuning:** PyTorch-based training on **Google Colab**.  
   - **Inference:** Deployed as a chatbot API.  
-- **Results:** Generated **context-aware answers** with **90% user satisfaction**.  
+- **Results:** Generated **context-aware answers**.
 
 ---
 
@@ -58,7 +58,7 @@ EduAI adapts to the user's **learning preferences** and optimizes their study ex
   - **Time tracking with user session data**  
   - **Prediction of optimal study duration**  
   - **Analysis of focus patterns**  
-- **Results:** Identified **study efficiency trends** and recommended **personalized study durations**.  
+
 
 ---
 
