@@ -67,8 +67,8 @@ EduAI adapts to the user's **learning preferences** and optimizes their study ex
 | Model | Accuracy | Dataset Used | Key Features |  
 |--------|---------|--------------|--------------|  
 | Learning Style Predictor | 95% | Learning Behavior Dataset | Categorizes into VARK styles |  
-| Recommendation System | Course Interaction Data | Hybrid ML model for suggestions |  
-| AI Tutor | SQuAD v2 | Fine-tuned GPT-2 chatbot |  
+| Recommendation System | | Course Interaction Data | Hybrid ML model for suggestions |  
+| AI Tutor | | SQuAD v2 | Fine-tuned GPT-2 chatbot |  
 
 
 ---
