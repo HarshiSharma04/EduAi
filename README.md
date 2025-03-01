@@ -96,4 +96,4 @@ Click the image above to watch EduAI in action!
 
 1️⃣ **Clone the repository:**  
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/EduAI.git
+git clone https://github.com/HarshiSharma04/EduAI.git
